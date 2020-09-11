@@ -1,4 +1,4 @@
-# real-world-vue
+# Vue events app
 
 ## Project setup
 ```
