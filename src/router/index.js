@@ -13,6 +13,14 @@ const routes = [
             )
     },
     {
+        path: '/event/create',
+        name: 'event-create',
+        component: () =>
+            import(
+                /* webpackChunkName: "event-create" */ '../views/EventCreate.vue'
+            )
+    },
+    {
         path: '/event/:id',
         name: 'event-show',
         component: () =>
@@ -20,14 +28,6 @@ const routes = [
                 /* webpackChunkName: "event-show" */ '../views/EventShow.vue'
             ),
         props: true
-    },
-    {
-        path: '/event/create',
-        name: 'event-create',
-        component: () =>
-            import(
-                /* webpackChunkName: "event-create" */ '../views/EventCreate.vue'
-            )
     }
 ]
 
