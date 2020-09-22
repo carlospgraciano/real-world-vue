@@ -44,6 +44,42 @@
       "date": "2019-02-02T23:27:00.000Z",
       "time": "1:00",
       "attendees": []
+    },
+    {
+      "id": 2777882,
+      "user": {
+        "id": "abc123",
+        "name": "Adam Jahr"
+      },
+      "category": "nature",
+      "organizer": {
+        "id": "abc123",
+        "name": "Adam Jahr"
+      },
+      "title": "Eletric Car Tesla",
+      "description": "Convention of Electric Cars",
+      "location": "Santo Domingo, Dominican Republic",
+      "date": "2020-09-11T00:10:00.000Z",
+      "time": "10:00",
+      "attendees": []
+    },
+    {
+      "id": 7586204,
+      "user": {
+        "id": "abc123",
+        "name": "Adam Jahr"
+      },
+      "category": "food",
+      "organizer": {
+        "id": "abc123",
+        "name": "Adam Jahr"
+      },
+      "title": "Local Church Buffet",
+      "description": "Is a local event where the church invites the people to eat",
+      "location": "Santiago, Dominican Republic",
+      "date": "2020-09-26T00:19:00.000Z",
+      "time": "12:00",
+      "attendees": []
     }
   ]
 }
