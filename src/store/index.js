@@ -19,17 +19,22 @@ export default new Vuex.Store({
             'food',
             'community'
         ],
-        events: [
-            { id: 1, title: '...', organizer: '...' },
-            { id: 2, title: '...', organizer: '...' },
-            { id: 3, title: '...', organizer: '...' },
-            { id: 4, title: '...', organizer: '...' },
-            { id: 5, title: '...', organizer: '...' }
-        ]
+        events: [],
+        eventsTotal: 0,
+        event: {}
     },
     mutations: {
         ADD_EVENT(state, event) {
             state.events.push(event)
+        },
+        SET_EVENTS(state, events) {
+            state.events = events
+        },
+        SET_EVENTS_TOTAL(state, eventsTotal) {
+            state.eventsTotal = eventsTotal
+        },
+        SET_EVENT(state, event) {
+            state.event = event
         }
     },
     actions: {
@@ -40,11 +45,37 @@ export default new Vuex.Store({
             } catch (error) {
                 throw new Error(error)
             }
+        },
+        async fetchEvents({ commit }, { perPage, page }) {
+            try {
+                const { data, headers } = await EventService.getEvents(
+                    perPage,
+                    page
+                )
+                commit('SET_EVENTS', data)
+                commit('SET_EVENTS_TOTAL', headers['x-total-count'])
+            } catch (error) {
+                console.log('There was an error:', error.response)
+            }
+        },
+        async fetchEvent({ commit, getters }, id) {
+            const event = getters.getEventById(id)
+
+            if (event) {
+                commit('SET_EVENT', event)
+            } else {
+                try {
+                    const response = await EventService.getEventById(id)
+                    commit('SET_EVENT', response.data)
+                } catch (error) {
+                    console.log('There was an error', error.response)
+                }
+            }
         }
     },
     getters: {
         getEventById: state => id => {
-            return state.events.filter(event => event.id == id)
+            return state.events.find(event => event.id === id)
         }
     },
     modules: {}
