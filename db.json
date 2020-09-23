@@ -80,6 +80,24 @@
       "date": "2020-09-26T00:19:00.000Z",
       "time": "12:00",
       "attendees": []
+    },
+    {
+      "id": 3201113,
+      "user": {
+        "id": "abc123",
+        "name": "Adam"
+      },
+      "category": "",
+      "organizer": {
+        "id": "abc123",
+        "name": "Adam"
+      },
+      "title": "",
+      "description": "",
+      "location": "",
+      "date": "2020-09-04T00:19:00.000Z",
+      "time": "4:00",
+      "attendees": []
     }
   ]
 }
