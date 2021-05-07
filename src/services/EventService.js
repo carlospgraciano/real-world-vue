@@ -21,4 +21,4 @@ export default {
     }
 }
 
-const pepeLAPiedra = "";
+console.log("pepe"); // esto no es radio
