@@ -1,4 +1,6 @@
-# Vue events app
+# Real world Vue app!
+
+Code like a pro!
 
 ## Project setup
 ```
