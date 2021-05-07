@@ -20,5 +20,3 @@ export default {
         return apiClient.post('/events', event)
     }
 }
-
-console.log("pepe"); // esto no es radio
