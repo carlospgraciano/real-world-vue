@@ -21,4 +21,4 @@ export default {
     }
 }
 
-// esto no es radio
+// esto no es
