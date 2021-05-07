@@ -21,4 +21,4 @@ export default {
     }
 }
 
-// esto no es
+const pepeLAPiedra = "";
